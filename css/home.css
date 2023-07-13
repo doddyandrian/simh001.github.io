@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: grid;
+  background-color: #0e1621;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+}
+header .container {
+  display: grid;
+  grid-template-areas: "judul judul judul judul sign" "garis garis garis garis garis";
+}
+header .container .judul {
+  grid-area: judul;
+  width: 85%;
+  display: flex;
+}
+header .container .judul img {
+  border: 3px solid #b3b3b3;
+  border-radius: 50%;
+  width: 14rem;
+  height: 14rem;
+  margin: 2rem;
+}
+header .container .judul .judul_simh {
+  align-self: center;
+}
+header .container .judul .judul_simh h1 {
+  color: #b3b3b3;
+  font-size: 6rem;
+}
+header .container .judul .judul_simh h4 {
+  color: #b3b3b3;
+  font-size: 1.1rem;
+  margin-top: -1rem;
+}
+header .container .sign {
+  grid-area: sign;
+  margin: 0 auto;
+}
+header .container .sign .link {
+  padding: 1.5rem 0.5rem;
+}
+header .container .sign .link a {
+  color: #0e1621;
+  padding: 0.4rem 0.5rem;
+  background-color: #b3b3b3;
+}
+header .container .sign .link .signup {
+  border-radius: 50px 0 0 50px;
+  border: 3px solid #b3b3b3;
+  font-weight: 800;
+  margin: 10px 0 10px 10px;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+header .container .sign .link .signin {
+  border-radius: 0 40px 40px 0;
+  border: 3px solid #b3b3b3;
+  font-weight: 600;
+  margin: 10px 10px 10px 0;
+  text-decoration: none;
+}
+header .container hr {
+  grid-area: garis;
+  width: 90%;
+  margin: 1rem auto;
+}
+
+@media screen and (max-width: 640px) {
+  header {
+    margin-top: 2rem;
+  }
+  header .container {
+    display: grid;
+    grid-template-areas: "judul" "garis" "sign";
+  }
+  header .container .judul {
+    grid-area: judul;
+    width: 100%;
+  }
+  header .container .judul img {
+    width: 25vw;
+    height: 25vw;
+    margin: 1rem 0.5rem 1rem 1rem;
+  }
+  header .container .judul .judul_simh {
+    margin: 0;
+    text-align: left;
+  }
+  header .container .judul .judul_simh h1 {
+    font-size: 16vw;
+  }
+  header .container .judul .judul_simh h4 {
+    font-size: 3vw;
+    margin-top: -0.5rem;
+  }
+  header hr {
+    margin-top: 1rem;
+    grid-area: garis;
+  }
+}/*# sourceMappingURL=home.css.map */
