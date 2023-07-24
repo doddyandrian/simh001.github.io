@@ -5,30 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>S.I.M.H</title>
+    <link rel="shortcut icon" href="../document/image/logo_icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="../css/chat.css" />
   </head>
   <body>
     <header>
       <div class="container">
-        <img src="" alt="" />
-        <h1>S.I.M.H</h1>
+        <img src="../document/image/logo.png" alt="" />
+        <a href="../index.html">
+          <h1>S.I.M.H</h1>
+        </a>
       </div>
     </header>
+    <main></main>
     <footer>
       <div class="container">
         <div class="chat">
           <div class="img_chat emote">
-            <a href="#"><img src="../document/image/emote.png" alt="emote" /></a>
+            <!-- <a href="#"><img src="../document/image/emote.png" alt="emote" /></a> -->
+            <button><img src="../document/image/emote.png" alt="" /></button>
           </div>
           <div class="img_chat file">
-            <a href="#"><img src="../document/image/file.png" alt="file" /></a>
+            <!-- <a href="#"><img src="../document/image/file.png" alt="file" /></a> -->
+            <button><img src="../document/image/file.png" alt="" /></button>
           </div>
-          <div class="pesan"><input type="text" name="" id="" placeholder="Ketik pesan" /></div>
+          <div class="pesan">
+            <!-- <textarea name="" id="" cols="" rows="" placeholder="Ketik pesan"></textarea> -->
+            <textarea name="text" oninput="gantiSend()" rows="1" wrap="soft" placeholder="Ketik pesan"></textarea>
+            <!-- <input type="text" name="" id="" placeholder="Ketik pesan" /> -->
+          </div>
           <div class="img_chat vn">
-            <a href="#"><img src="../document/image/vn.png" alt="vn" /></a>
+            <!-- <a href="#"><img src="../document/image/vn.png" alt="vn" /></a> -->
+            <button><img src="../document/image/vn.png" alt="" /></button>
           </div>
           <div class="img_chat send">
-            <a href="#"><img src="../document/image/send.png" alt="send" /></a>
+            <!-- <a href="#"><img src="../document/image/send.png" alt="send" /></a> -->
+            <button class=""><img src="../document/image/send.png" alt="" /></button>
           </div>
         </div>
       </div>

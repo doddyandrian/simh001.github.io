@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Halaman Login</title>
+  </head>
+  <body>
+    <h2>Halaman Login</h2>
+    <?php if(isset($error)) { ?>
+    <p style="color: red"><?php echo $error; ?></p>
+    <?php } ?>
+    <form method="POST" action="">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required /><br /><br />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required /><br /><br />
+      <input type="submit" name="login" value="Login" />
+    </form>
+
+    <?php
+// Menginisialisasi session
+session_start();
+
+// Memeriksa apakah pengguna sudah login, jika ya, akan dialihkan ke halaman lain
+if(isset($_SESSION['username'])){
+    header("Location: dashboard.php");
+    exit;
+}
+
+// Memeriksa apakah form login telah disubmit
+if(isset($_POST['login'])){
+    // Mengambil data dari form login
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Memeriksa kecocokan data login dengan data yang valid
+    if($username === 'admin' && $password === 'admin123'){
+        // Menyimpan data login ke dalam session
+        $_SESSION['username'] = $username;
+
+        // Mengalihkan pengguna ke halaman dashboard setelah berhasil login
+        header("Location: dashboard.php");
+        exit;
+    } else {
+        // Jika data login tidak valid, menampilkan pesan error
+        $error = "Username atau password salah.";
+    }
+}
+?>
+  </body>
+</html>

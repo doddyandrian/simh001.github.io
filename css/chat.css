@@ -23,21 +23,31 @@ header {
 header .container {
   display: flex;
   align-items: center;
+  margin: 0.2rem;
 }
 header .container img {
+  background-color: #b3b3b3;
   border: 3px solid #b3b3b3;
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
-  margin: 0 2rem;
+  margin: 0 1rem 0 2rem;
 }
-header .container h1 {
+header .container a {
+  text-decoration: none;
+}
+header .container a h1 {
   color: #b3b3b3;
   font-size: 3rem;
 }
 
+main {
+  width: 80%;
+  margin: 0 auto 1rem;
+}
+
 footer {
-  width: 100vw;
+  width: 100%;
   position: fixed;
   bottom: 0;
 }
@@ -45,12 +55,11 @@ footer .container {
   justify-self: center;
   align-self: center;
   background-color: #17212b;
-  width: 80vw;
+  width: 80%;
   margin: 0 auto 1rem;
   text-align: center;
   height: 4rem;
-  line-height: 4rem;
-  padding: 0 1rem;
+  padding: 0 1rem 0 1rem;
   border-radius: 20px 20px 30px 30px;
 }
 footer .container .chat {
@@ -60,27 +69,36 @@ footer .container .chat .img_chat {
   flex-grow: 1;
   width: 3rem;
 }
-footer .container .chat .img_chat a img {
+footer .container .chat .img_chat button {
+  height: 4rem;
+  background-color: #17212b;
+  border: none;
+  cursor: pointer;
+}
+footer .container .chat .img_chat button img {
   height: 2rem;
-  margin: 1rem 0;
 }
 footer .container .chat .pesan {
   flex-grow: 100;
+  display: flex;
 }
-footer .container .chat .pesan input {
+footer .container .chat .pesan textarea {
   width: 100%;
+  margin: auto;
+  font-size: 1rem;
   border-radius: 50px;
   border-color: #b3b3b3;
   color: #b3b3b3;
-  height: 2rem;
+  overflow: hidden;
   padding: 8px;
   background-color: #17212b;
+  resize: none;
 }
-footer .container .chat .pesan input::-moz-placeholder {
+footer .container .chat .pesan textarea::-moz-placeholder {
   color: #b3b3b3;
   background-color: #17212b;
 }
-footer .container .chat .pesan input::placeholder {
+footer .container .chat .pesan textarea::placeholder {
   color: #b3b3b3;
   background-color: #17212b;
 }

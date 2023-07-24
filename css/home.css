@@ -28,12 +28,19 @@ header .container .judul {
   width: 85%;
   display: flex;
 }
-header .container .judul img {
+header .container .judul .logo {
   border: 3px solid #b3b3b3;
   border-radius: 50%;
   width: 14rem;
   height: 14rem;
   margin: 2rem;
+  background-color: #b3b3b3;
+  display: flex;
+}
+header .container .judul .logo img {
+  margin: auto;
+  width: 10rem;
+  height: 10rem;
 }
 header .container .judul .judul_simh {
   align-self: center;
@@ -57,11 +64,11 @@ header .container .sign .link {
 header .container .sign .link a {
   color: #0e1621;
   padding: 0.4rem 0.5rem;
-  background-color: #b3b3b3;
 }
 header .container .sign .link .signup {
   border-radius: 50px 0 0 50px;
-  border: 3px solid #b3b3b3;
+  border: 3px solid #cecece;
+  background-color: #cecece;
   font-weight: 800;
   margin: 10px 0 10px 10px;
   text-decoration: none;
@@ -70,6 +77,7 @@ header .container .sign .link .signup {
 header .container .sign .link .signin {
   border-radius: 0 40px 40px 0;
   border: 3px solid #b3b3b3;
+  background-color: #b3b3b3;
   font-weight: 600;
   margin: 10px 10px 10px 0;
   text-decoration: none;
@@ -78,12 +86,36 @@ header .container hr {
   grid-area: garis;
   width: 90%;
   margin: 1rem auto;
+  background-color: #b3b3b3;
+  color: #b3b3b3;
+  height: 0.3rem;
+}
+
+main {
+  min-height: 268px;
+  font-size: 1.1rem;
+}
+main .deskripsi {
+  width: 75%;
+  margin: 2rem auto;
+}
+main .deskripsi p {
+  text-align: justify;
+  margin: auto;
+  color: #cecece;
+}
+
+footer {
+  border-radius: 50px 50px 0 0;
+  font-size: 0.9rem;
+  background-color: black;
+  padding: 1rem 0;
+  color: antiquewhite;
+  width: 100%;
+  text-align: center;
 }
 
 @media screen and (max-width: 640px) {
-  header {
-    margin-top: 2rem;
-  }
   header .container {
     display: grid;
     grid-template-areas: "judul" "garis" "sign";
@@ -91,11 +123,17 @@ header .container hr {
   header .container .judul {
     grid-area: judul;
     width: 100%;
+    margin: 2rem 0 0 0;
   }
-  header .container .judul img {
-    width: 25vw;
-    height: 25vw;
+  header .container .judul .logo {
+    margin: auto;
+    width: 19vw;
+    height: 19vw;
     margin: 1rem 0.5rem 1rem 1rem;
+  }
+  header .container .judul .logo img {
+    width: 15vw;
+    height: 15vw;
   }
   header .container .judul .judul_simh {
     margin: 0;
@@ -106,10 +144,45 @@ header .container hr {
   }
   header .container .judul .judul_simh h4 {
     font-size: 3vw;
-    margin-top: -0.5rem;
   }
-  header hr {
-    margin-top: 1rem;
+  header .container .sign {
+    grid-area: sign;
+    margin: 0 auto;
+  }
+  header .container .sign .link {
+    padding: 1.5rem 0.5rem;
+  }
+  header .container .sign .link a {
+    color: #0e1621;
+    padding: 0.2rem 0.25rem;
+    font-size: 0.9rem;
+  }
+  header .container .sign .link .signup {
+    border-radius: 50px 0 0 50px;
+    border: 3px solid #cecece;
+    background-color: #cecece;
+    font-weight: 800;
+    margin: 7px 0 7px 7px;
+    text-decoration: none;
+    padding: 0.25rem;
+  }
+  header .container .sign .link .signin {
+    border-radius: 0 40px 40px 0;
+    border: 3px solid #b3b3b3;
+    background-color: #b3b3b3;
+    font-weight: 600;
+    margin: 5px 5px 5px 0;
+    text-decoration: none;
+  }
+  header .container hr {
+    margin: 0.5rem auto;
     grid-area: garis;
+    height: 0.1rem;
+  }
+  main .deskripsi p {
+    text-align: justify;
+  }
+  footer {
+    font-size: 0.7rem;
   }
 }/*# sourceMappingURL=home.css.map */
