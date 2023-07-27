@@ -92,21 +92,30 @@ header .container hr {
 }
 
 main {
-  min-height: 268px;
   font-size: 1.1rem;
 }
 main .deskripsi {
   width: 75%;
   margin: 2rem auto;
+  display: grid;
+  grid-template-areas: "p p p" "satu satu video";
 }
 main .deskripsi p {
+  grid-area: p;
   text-align: justify;
   margin: auto;
   color: #cecece;
 }
+main .deskripsi video {
+  grid-area: video;
+  margin: 2rem auto 0;
+  width: 90%;
+  border-radius: 25px;
+}
 
 footer {
   border-radius: 50px 50px 0 0;
+  bottom: 0;
   font-size: 0.9rem;
   background-color: black;
   padding: 1rem 0;
@@ -179,8 +188,16 @@ footer {
     grid-area: garis;
     height: 0.1rem;
   }
+  main .deskripsi {
+    grid-template-areas: "p" "video";
+  }
   main .deskripsi p {
+    grid-area: p;
     text-align: justify;
+  }
+  main .deskripsi video {
+    grid-area: video;
+    width: 80%;
   }
   footer {
     font-size: 0.7rem;
